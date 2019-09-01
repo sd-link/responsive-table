@@ -134,7 +134,6 @@ table.freezeFirstColumn tbody th:first-child {
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
-  border-radius: 10px;
 }
 
 .box table.scrolling td, .box table.scrolling th {
@@ -153,7 +152,7 @@ table.freezeFirstColumn tbody th:first-child {
 
 .box .cell-over {
   position: absolute;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(62, 131, 255, .3);
   width: 100%;
   height: 100%;
   top: 0;
@@ -161,11 +160,11 @@ table.freezeFirstColumn tbody th:first-child {
 }
 .box .cell-size {
   font-weight: 700;
-  font-size: 22px;
   text-align: center;
 }
 .box .cell-inch, .box .cell-centi {
   text-align: center;
+  line-height: 18px;
 }
 
 .box .cell-symbol {
@@ -175,7 +174,7 @@ table.freezeFirstColumn tbody th:first-child {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  background-color: black;
+  background-color: #3e83ff;
   color: white;
   margin-top: -30px;
   position: absolute;
@@ -200,15 +199,22 @@ table.freezeFirstColumn tbody th:first-child {
 }
 .img-wrapper {
   height: 300px;
-  background: #f0f0f0;
   height: 100%;
-  min-height: 300px
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
 }
 .wrapper {
   position: relative;
-  border: 1px solid #f0f0f0;
   border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
+
 
 
 
