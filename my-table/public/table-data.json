@@ -1,0 +1,169 @@
+{
+  "columns": [
+     {
+        "id": "size",
+        "title": "Size",
+        "cssClasses": ""
+     },
+     {
+        "id": "sleeve_a",
+        "title": "Sleeve A",
+        "symbol": "A",
+        "cssClasses": ""
+     },
+     {
+        "id": "sleeve_b",
+        "title": "Sleeve B",
+        "symbol": "B",
+        "cssClasses": ""
+     },
+     {
+        "id": "shoulder",
+        "title": "Shoulder",
+        "symbol": "C",
+        "cssClasses": "w2"
+     },
+     {
+        "id": "length",
+        "title": "Length",
+        "symbol": "D",
+        "cssClasses": "w2"
+     },
+     {
+        "id": "chest",
+        "title": "Chest",
+        "symbol": "E",
+        "cssClasses": ""
+     },
+     {
+        "id": "waist",
+        "title": "Waist",
+        "symbol": "F",
+        "cssClasses": ""
+     },
+     {
+        "id": "cuff",
+        "title": "Cuff",
+        "symbol": "G",
+        "cssClasses": ""
+     },
+     {
+        "id": "hem",
+        "title": "Hem",
+        "symbol": "H",
+        "cssClasses": ""
+     }
+  ],
+  "allItems": [
+     {
+        "size": "XXS",
+        "sleeve_a": 9,
+        "sleeve_b": 10,
+        "shoulder": 8,
+        "length": 12,
+        "chest": 14,
+        "waist": 8,
+        "cuff": 12,
+        "hem": 8
+     },
+     {
+        "size": "XS",
+        "sleeve_a": 9,
+        "sleeve_b": 10,
+        "shoulder": 8,
+        "length": 12,
+        "chest": 14,
+        "waist": 8,
+        "cuff": 12,
+        "hem": 8
+     },
+     {
+        "size": "S",
+        "sleeve_a": 9,
+        "sleeve_b": 10,
+        "shoulder": 8,
+        "length": 12,
+        "chest": 14,
+        "waist": 8,
+        "cuff": 12,
+        "hem": 8
+     },
+     {
+        "size": "M",
+        "sleeve_a": 9,
+        "sleeve_b": 10,
+        "shoulder": 8,
+        "length": 12,
+        "chest": 14,
+        "waist": 8,
+        "cuff": 12,
+        "hem": 8
+     },
+     {
+        "size": "L",
+        "sleeve_a": 9,
+        "sleeve_b": 10,
+        "shoulder": 8,
+        "length": 12,
+        "chest": 14,
+        "waist": 8,
+        "cuff": 12,
+        "hem": 8
+     },
+     {
+        "size": "XL",
+        "sleeve_a": 9,
+        "sleeve_b": 10,
+        "shoulder": 8,
+        "length": 12,
+        "chest": 14,
+        "waist": 8,
+        "cuff": 12,
+        "hem": 8
+     },
+     {
+        "size": "XXL",
+        "sleeve_a": 9,
+        "sleeve_b": 10,
+        "shoulder": 8,
+        "length": 12,
+        "chest": 14,
+        "waist": 8,
+        "cuff": 12,
+        "hem": 8
+     },
+     {
+        "size": "XXXL",
+        "sleeve_a": 9,
+        "sleeve_b": 10,
+        "shoulder": 8,
+        "length": 12,
+        "chest": 14,
+        "waist": 8,
+        "cuff": 12,
+        "hem": 8
+     },
+     {
+        "size": "4XL",
+        "sleeve_a": 9,
+        "sleeve_b": 10,
+        "shoulder": 8,
+        "length": 12,
+        "chest": 14,
+        "waist": 8,
+        "cuff": 12,
+        "hem": 8
+     },
+     {
+        "size": "5XL",
+        "sleeve_a": 9,
+        "sleeve_b": 10,
+        "shoulder": 8,
+        "length": 12,
+        "chest": 14,
+        "waist": 8,
+        "cuff": 12,
+        "hem": 8
+     }
+  ]
+}
