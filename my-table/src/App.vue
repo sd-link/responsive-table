@@ -8,7 +8,8 @@
         :sync-footer-scroll="syncFooterScroll"
         :include-footer="includeFooter"
         :dead-area-color="deadAreaColor"
-        :class="{ freezeFirstColumn:freezeFirstColumn }">
+        :class="{ freezeFirstColumn:freezeFirstColumn }"
+      >
         <template slot="thead">
           <tr>
             <th v-for="(col, indexCol) in columns" 
@@ -125,6 +126,8 @@ table.freezeFirstColumn tbody th:first-child {
 	position: -webkit-sticky;
 	left: 0;
   z-index: 2;
+  background-color: #f8f8f8;
+  min-width: 65px !important;
 }
 
 .box {
@@ -136,11 +139,17 @@ table.freezeFirstColumn tbody th:first-child {
 	overflow: hidden;
 }
 
+.box table.scrolling {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
 .box table.scrolling td, .box table.scrolling th {
   position: relative;
   cursor: pointer;
   border: none;
   min-width: 100px;
+  padding: 0px;
 }
 .box table.scrolling td {
   height: 50px;
@@ -183,7 +192,7 @@ table.freezeFirstColumn tbody th:first-child {
 .box table.scrolling th {
   height: 60px;
   vertical-align: bottom;
-  background-color: white;
+  background-color: #fff;
 }
 .box .cell-header {
   display: flex;
@@ -216,7 +225,14 @@ table.freezeFirstColumn tbody th:first-child {
 }
 
 
-
+::-webkit-scrollbar {
+width: 4px; 
+height: 4px;
+background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: #3e83ff;
+}
 
 
 
