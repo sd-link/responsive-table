@@ -72,7 +72,7 @@ export default {
 			syncHeaderScroll: true,
 			syncFooterScroll: true,
 			includeFooter: true,
-			deadAreaColor: "#DDDDDD",
+			deadAreaColor: "#fff",
 			maxRows: 100,
 			freezeFirstColumn: true,
 			columns: [],
@@ -132,16 +132,10 @@ table.freezeFirstColumn tbody th:first-child {
 
 .box {
 	padding: 0;
-	min-height: 300px;
-	height: 40vh;
+	height: 400px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
-}
-
-.box table.scrolling {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
 }
 
 .box table.scrolling td, .box table.scrolling th {
@@ -207,31 +201,33 @@ table.freezeFirstColumn tbody th:first-child {
   --dead-area-color: #fff;
 }
 .img-wrapper {
-  height: 300px;
-  height: 100%;
+  height: 400px;
   min-height: 300px;
   display: flex;
   justify-content: center;
-  align-items: center;  
+  align-items: center; 
+  overflow: hidden; 
 }
 .wrapper {
   position: relative;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 .responsive-img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  max-height: 100%;
 }
 
 
 ::-webkit-scrollbar {
-width: 4px; 
-height: 4px;
+width: 5px; 
+height: 5px;
 background: transparent; 
 }
 ::-webkit-scrollbar-thumb {
-  background: #3e83ff;
+  background: #aaa;
 }
 
 
