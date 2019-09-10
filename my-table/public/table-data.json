@@ -28,30 +28,6 @@
         "title": "Length",
         "symbol": "D",
         "cssClasses": "w2"
-     },
-     {
-        "id": "chest",
-        "title": "Chest",
-        "symbol": "E",
-        "cssClasses": ""
-     },
-     {
-        "id": "waist",
-        "title": "Waist",
-        "symbol": "F",
-        "cssClasses": ""
-     },
-     {
-        "id": "cuff",
-        "title": "Cuff",
-        "symbol": "G",
-        "cssClasses": ""
-     },
-     {
-        "id": "hem",
-        "title": "Hem",
-        "symbol": "H",
-        "cssClasses": ""
      }
   ],
   "allItems": [

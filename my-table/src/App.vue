@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-    <div class="box">
+    <div class="box" ref="myTable">
       <vue-scrolling-table
         :scroll-horizontal="scrollHorizontal"
         :scroll-vertical="scrollVertical"
@@ -60,6 +60,8 @@
 import VueScrollingTable from "vue-scrolling-table";
 import axios from 'axios'
 
+var vm = null;
+
 export default {
 	name: "SampleApp",
 	components: {
@@ -67,6 +69,7 @@ export default {
 	},
 	data: function() {
 		return {
+      resizeEvent: null,
 			scrollVertical: true,
 			scrollHorizontal: true,
 			syncHeaderScroll: true,
@@ -78,11 +81,24 @@ export default {
 			columns: [],
       allItems: [],
       currentRow: null,
-      currentCol: null
+      currentCol: null,
+      cellWidthMin: 80 // the min width of cell in table
 		}
   },
   mounted() {
+    vm = this;
     this.fetchData();
+    this.resizeEvent = window.addEventListener('resize', this.resizeWindow);
+    setTimeout(() => {
+      this.resizeWindow();
+    }, 500);
+
+  },
+  beforeDestroy() {
+    if (this.resizeEvent) {
+      window.removeEventListener('resize', this.resizeWindow);
+      this.resizeWindow = null;
+    }
   },
 	computed: {
 		items() {
@@ -90,9 +106,24 @@ export default {
 		},
   },
   methods: {
+    resizeWindow() {
+      const tb = vm.$refs.myTable;
+      const cols = vm.columns.length;
+      if (tb && cols) {
+        const cellWidth = Math.max(tb.clientWidth / cols, vm.cellWidthMin);
+        const ths = document.querySelectorAll(".box table.scrolling th");
+        const tds = document.querySelectorAll(".box table.scrolling td");
+        ths.forEach(th => {
+          th.style.minWidth = `${cellWidth}px`;
+        });
+        tds.forEach(td => {
+          td.style.minWidth = `${cellWidth}px`;
+        });
+        vm.scrollHorizontal = cellWidth == vm.cellWidthMin;
+      }
+    },
     toInch(centi) {
       return (centi * 0.393701).toFixed(1);
-      
     },
     setCurrent(row, col) {
       this.currentRow = row;
@@ -127,7 +158,6 @@ table.freezeFirstColumn tbody th:first-child {
 	left: 0;
   z-index: 2;
   background-color: #f8f8f8;
-  min-width: 65px !important;
 }
 
 .box {
@@ -142,7 +172,6 @@ table.freezeFirstColumn tbody th:first-child {
   position: relative;
   cursor: pointer;
   border: none;
-  min-width: 100px;
   padding: 0px;
 }
 .box table.scrolling td {
